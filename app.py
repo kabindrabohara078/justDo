@@ -1,22 +1,15 @@
 from flask import Flask, render_template, request
 
-
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('index.html')
 
-@app.route('/login', methods=['post'])
-def login():
-    username = request.form.get('username')
-    password = request.form.get('password')
-    print(username, password)
 
-    return 'Done fuckoff'
+@app.route('/add', methods=["POST"])
+def add():
+    print(request.form['title'])
+    print(request.form['desc'])
 
-@app.route('/register')
-def register(data):
-    print(data)
-
-app.run()
+    return render_template('index.html', add = 1)

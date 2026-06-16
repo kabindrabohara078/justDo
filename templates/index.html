@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>justDo - home</title>
+    <link rel="stylesheet" 
+    href="{{url_for('static', filename='style.css')}}"
+    >
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="hero-icon">
+            <img src="" alt="app-logo">
+        </div>
+        <div class="app-name"><h1>JustDo</h1></div>
+    </nav>
+
+    {% if add == 1 %}
+        <div class="popup">Todo added</div>
+    {% endif %}
+
+    <form action="/add" method="POST">
+
+        <label for="">Title</label>
+        <input type="text" name="title">
+        <label for="">Description</label>
+        <input type="text" name="desc">
+
+        <button>Add To Do</button>
+
+    </form>
+    
+</body>
+</html>
