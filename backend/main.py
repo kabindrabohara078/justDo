@@ -12,7 +12,7 @@ app = FastAPI()
 # 🔐 CORS Middleware must sit immediately below app initialization
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Matches default Vite port
+    allow_origins=["https://just-do-jet.vercel.app/"],  # Matches default Vite port
     allow_credentials=True,
     allow_methods=["*"],                      # Allows GET, POST, PATCH, DELETE, OPTIONS
     allow_headers=["*"],                      # Allows all headers
