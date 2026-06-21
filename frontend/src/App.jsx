@@ -7,7 +7,7 @@ function App() {
   const [pop, setPop] = useState(false);
 
   // 🌍 Base Endpoint URL
-  const API_URL = 'http://127.0.0.1:8000/todos';
+  const API_URL = 'https://todo-backend-8q48.onrender.com/todos';
 
   // 🔄 FETCH ALL
   const fetchTodos = async () => {
